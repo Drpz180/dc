@@ -4,7 +4,30 @@
 require_once __DIR__ . '/Env.php';
 Env::load();
 
-define('BASE_URL', Env::get('BASE_URL', 'http://localhost/public'));
+/**
+ * No Render/Docker a raiz do site já é a pasta public/ — BASE_URL não deve terminar em /public.
+ */
+function app_resolve_base_url(): string
+{
+    $url = rtrim((string) Env::get('BASE_URL', ''), '/');
+    if ($url !== '' && str_ends_with($url, '/public')) {
+        $url = substr($url, 0, -7);
+    }
+    if ($url === '' && !empty($_SERVER['HTTP_HOST'])) {
+        $scheme = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http';
+        $url = $scheme . '://' . $_SERVER['HTTP_HOST'];
+    }
+    return $url ?: 'http://localhost';
+}
+
+/** Monta URL absoluta: url_path('admin/index.php') */
+function url_path(string $path = ''): string
+{
+    $path = ltrim($path, '/');
+    return rtrim(app_resolve_base_url(), '/') . ($path !== '' ? '/' . $path : '');
+}
+
+define('BASE_URL', app_resolve_base_url());
 
 define('ADMIN_USER', Env::get('ADMIN_USER', 'admin'));
 define('ADMIN_PASS', Env::get('ADMIN_PASS', ''));

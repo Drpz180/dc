@@ -1,0 +1,13 @@
+DirectoryIndex index.php index.html
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # URLs antigas do XAMPP/cPanel: /public/admin → /admin
+    RewriteRule ^public/(.*)$ /$1 [R=301,L]
+
+    # /admin → /admin/
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteCond %{REQUEST_URI} !/$
+    RewriteRule ^(.+)$ /$1/ [R=301,L]
+</IfModule>

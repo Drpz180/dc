@@ -9,8 +9,8 @@
 </head>
 <body>
   <h1>Bem-vindo ao Minha Vaquinha!</h1>
-  <p><a href="admin/index.php">Ir para o painel administrativo</a></p>
-  <p>Para acessar uma campanha, use: <code>campaign.php?slug=seu-slug</code></p>
+  <p><a href="/admin/index.php">Ir para o painel administrativo</a></p>
+  <p>Para acessar uma campanha, use: <a href="/campaign.php?slug=exemplo">campaign.php?slug=seu-slug</a></p>
 </body>
 <footer style="background:#222; color:#eee; margin-top:40px; padding:0;">
   <div style="max-width:1400px; margin:0 auto; padding:38px 0 18px 0; display:flex; gap:0; flex-wrap:wrap; justify-content:space-between;">

@@ -116,10 +116,8 @@ $orderStatus = null;
 $txid = null;
 $errors = []; // novo: acumula erros de validação
 
-// Sempre constrói o webhookUrl a partir do host atual (evita apontar para outro domínio estático)
-$scheme = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http';
-$host = $_SERVER['HTTP_HOST'] ?? 'localhost';
-$webhookUrl = $scheme . '://' . $host . '/public/webhooks/pix.php';
+// Webhook PIX (Render: raiz = public/, sem prefixo /public na URL)
+$webhookUrl = url_path('webhooks/pix.php');
 @file_put_contents(__DIR__ . '/../logs/pix_debug.log', date('Y-m-d H:i:s') . " [WEBHOOK URL] using webhookUrl={$webhookUrl}\n", FILE_APPEND);
 
 // ===== NOVO: gerador de dados de cliente com cache de 1 semana =====
