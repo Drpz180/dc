@@ -1,0 +1,51 @@
+# Blueprint Render — opcional (deploy via Dashboard com Docker também funciona)
+services:
+  - type: web
+    name: vakapostgree
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /
+    envVars:
+      - key: BASE_URL
+        sync: false
+      - key: ADMIN_USER
+        sync: false
+      - key: ADMIN_PASS
+        sync: false
+      - key: DB_HOST
+        sync: false
+      - key: DB_PORT
+        value: "5432"
+      - key: DB_NAME
+        sync: false
+      - key: DB_USER
+        sync: false
+      - key: DB_PASS
+        sync: false
+      - key: DB_SSLMODE
+        value: require
+      - key: DB_TIMEZONE
+        value: America/Sao_Paulo
+      - key: PIX_CLIENT_ID
+        sync: false
+      - key: PIX_CLIENT_SECRET
+        sync: false
+      - key: PIX_BASE_URL
+        sync: false
+      - key: PIX_KEY
+        sync: false
+      - key: UMBRELLA_BASE_URL
+        sync: false
+      - key: UMBRELLA_API_KEY
+        sync: false
+      - key: UMBRELLA_USER_AGENT
+        value: UMBRELLAB2B/1.0
+      - key: AUREAPAG_BASE_URL
+        sync: false
+      - key: AUREAPAG_API_TOKEN
+        sync: false
+      - key: AUREAPAG_OFFER_HASH
+        sync: false
+      - key: AUREAPAG_PRODUCT_HASH
+        sync: false

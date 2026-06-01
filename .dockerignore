@@ -1,0 +1,12 @@
+.env
+.env.*
+!.env.example
+.git
+.gitignore
+logs/
+*.log
+install_output.txt
+vaka_backup.sql
+node_modules/
+.cursor/
+agent-tools/
