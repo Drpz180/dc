@@ -1,0 +1,27 @@
+[07-Apr-2026 11:54:01 America/Sao_Paulo] Filtro hoje: 2026-04-07
+[07-Apr-2026 21:07:14 America/Sao_Paulo] Filtro hoje: 2026-04-07
+[14-Apr-2026 03:19:13 America/Sao_Paulo] Filtro hoje: 2026-04-14
+[14-Apr-2026 03:19:16 America/Sao_Paulo] Filtro ontem: 2026-04-13
+[14-Apr-2026 03:19:37 America/Sao_Paulo] Filtro hoje: 2026-04-14
+[14-Apr-2026 03:19:40 America/Sao_Paulo] Filtro hoje: 2026-04-14
+[14-Apr-2026 03:54:05 America/Sao_Paulo] Filtro hoje: 2026-04-14
+[14-Apr-2026 03:54:08 America/Sao_Paulo] Filtro ontem: 2026-04-13
+[14-Apr-2026 03:54:19 America/Sao_Paulo] Filtro personalizado: 2026-04-04 até 2026-04-14
+[14-Apr-2026 11:32:50 America/Sao_Paulo] Filtro hoje: 2026-04-14
+[14-Apr-2026 13:40:10 America/Sao_Paulo] Filtro hoje: 2026-04-14
+[14-Apr-2026 13:42:16 America/Sao_Paulo] Filtro hoje: 2026-04-14
+[14-Apr-2026 23:11:26 America/Fortaleza] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'tiktok_access_token' in 'field list' in /home2/joelro28/instituto4talecer.site/app/models/Campaign.php:97
+Stack trace:
+#0 /home2/joelro28/instituto4talecer.site/app/models/Campaign.php(97): PDOStatement->execute(Array)
+#1 /home2/joelro28/instituto4talecer.site/public/admin/edit.php(65): Campaign::save(Array)
+#2 {main}
+  thrown in /home2/joelro28/instituto4talecer.site/app/models/Campaign.php on line 97
+[15-Apr-2026 08:35:48 America/Sao_Paulo] Filtro hoje: 2026-04-15
+[15-Apr-2026 10:39:56 America/Sao_Paulo] Filtro hoje: 2026-04-15
+[15-Apr-2026 10:48:42 America/Sao_Paulo] Filtro hoje: 2026-04-15
+[15-Apr-2026 12:31:32 America/Sao_Paulo] Filtro hoje: 2026-04-15
+[15-Apr-2026 17:31:28 America/Sao_Paulo] Filtro hoje: 2026-04-15
+[15-Apr-2026 21:31:58 America/Sao_Paulo] Filtro hoje: 2026-04-15
+[15-Apr-2026 21:32:08 America/Sao_Paulo] Filtro personalizado: 2026-04-04 até 2026-04-16
+[15-Apr-2026 23:38:13 America/Sao_Paulo] Filtro hoje: 2026-04-15
+[16-Apr-2026 04:33:11 America/Sao_Paulo] Filtro hoje: 2026-04-16

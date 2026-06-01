@@ -1,0 +1,4 @@
+.env
+logs/
+*.log
+install_output.txt

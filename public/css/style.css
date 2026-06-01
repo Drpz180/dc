@@ -1,0 +1,2209 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700&display=swap');
+
+body {
+  font-family: 'Lato', Arial, sans-serif;
+  color: #282828;
+  background: #f3f3f3;
+  margin: 0;
+  padding: 0;
+}
+
+.page-wrapper {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 15px;
+}
+
+.campaign-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+
+.campaign-cover img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.campaign-info h1 {
+  margin-top: 15px;
+}
+
+.campaign-category {
+  font-size: 12px;
+  color: #888;
+  text-transform: uppercase;
+}
+
+.campaign-description {
+  margin-top: 15px;
+  line-height: 1.5;
+}
+
+.campaign-pix-box {
+  margin-top: 20px;
+  padding: 10px;
+  background: #fff7e0;
+  border-radius: 6px;
+}
+
+.campaign-sidebar .box {
+  background: #fff;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+.campaign-amount strong {
+  font-size: 22px;
+  display: block;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.progress-bar .fill {
+  height: 100%;
+  background: #00c853;
+}
+
+.btn-primary,
+.btn-outline {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 4px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: #00c853;
+  color: #fff;
+}
+
+.btn-outline {
+  background: #fff;
+  border: 1px solid #00c853;
+  color: #00c853;
+}
+
+/* HEADER MOBILE IGUAL FOTO */
+@media (max-width: 600px) {
+  .vakinha-header {
+    height: 70px; /* aumenta o header */
+    padding: 0 12px;
+    border-bottom: 1px solid #eee;
+    box-sizing: border-box;
+  }
+  .vakinha-header .container {
+    max-width: 100vw;
+    height: 70px; /* aumenta o header */
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .vakinha-header .logo-area {
+    flex: none;
+    display: flex;
+    align-items: center;
+    gap: 0;
+  }
+  .vakinha-header .logo-img {
+    height: 42px; /* aumenta o logo */
+    width: auto;
+    margin-right: 0;
+  }
+  .vakinha-header .logo-text {
+    display: inline !important;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #00c853;
+    margin-left: 6px;
+  }
+  .vakinha-header nav {
+    display: none !important;
+  }
+  .vakinha-header .nav-right {
+    flex: none;
+    display: flex;
+    align-items: center;
+    gap: 6px; /* diminui o gap para aproximar lupa e menu */
+  }
+  .vakinha-header .nav-right .search-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px; /* aumenta área da lupa */
+    height: 44px;
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+  }
+  .vakinha-header .nav-right .search-icon {
+    width: 28px; /* aumenta lupa */
+    height: 28px;
+    stroke: #00c853;
+    display: block;
+  }
+  .vakinha-header .account-link,
+  .vakinha-header .btn-vakinha {
+    display: none !important;
+  }
+  .vakinha-header .menu-mobile {
+    display: flex !important;
+    width: 44px; /* aumenta área do menu */
+    height: 44px;
+    align-items: center;
+    justify-content: center;
+    background: transparent !important;
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
+  .vakinha-header .menu-icon {
+    width: 28px !important; /* aumenta ícone do menu */
+    height: 28px !important;
+    fill: #282828 !important;
+    display: block;
+  }
+}
+
+/* Barra fixa de ação no mobile */
+@media (max-width: 600px) {
+  .fixed-action-bar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #f6fff6;
+    border-top: 1px solid #e0e0e0;
+    z-index: 1000;
+    padding: 0 0 8px 0;
+    box-shadow: 0 -2px 12px rgba(0,0,0,0.07);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .fixed-action-bar .donation-protected {
+    margin: 0 16px 0 16px !important;      /* remove espaço inferior */
+    padding: 18px 0 20px 0 !important;      /* desce o fundo verde */
+    background: #e9fdeb !important; /* verde bem claro */
+    border-radius: 26px !important;         /* cantos mais arredondados */
+    border: none !important;
+    position: relative;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+  }
+  .fixed-action-bar .donation-protected::after {
+    content: "";
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    height: 12px;
+    background: linear-gradient(to bottom, rgba(233,253,235,0) 0%, rgba(233,253,235,1) 70%);
+    border-radius: 0 0 20px 20px;
+    pointer-events: none;
+  }
+  .fixed-action-bar .doacao-protegida-img {
+    height: 44px !important;                /* aumenta tamanho da imagem */
+    width: auto !important;
+  }
+
+  /* Botões iguais largura / altura */
+  .fixed-action-bar .action-btn {
+    width: calc(100% - 32px);
+    margin: 12px 16px 0 16px;
+    display: block;
+    text-align: center;
+    font-family: 'Montserrat', Arial, sans-serif !important;
+    font-weight: 700 !important;
+    font-size: 1.05em;
+    padding: 16px 0;
+    border-radius: 12px;
+    line-height: 1;
+    box-sizing: border-box;
+  }
+  .fixed-action-bar .btn-primary.action-btn {
+    background: #00c853;
+    color: #fff;
+    border: none;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+  }
+  .fixed-action-bar .btn-primary.action-btn:hover {
+    background: #00b348;
+  }
+  .fixed-action-bar .btn-outline.action-btn {
+    background: #fff;
+    color: #282828;
+    border: 2px solid #282828;
+  }
+  .fixed-action-bar .btn-outline.action-btn:hover {
+    background: #282828;
+    color: #fff;
+  }
+
+  /* Ajuste de espaçamento inferior global para não cobrir conteúdo */
+  body.is-mobile {
+    padding-bottom: 140px; /* reserva espaço para barra fixa */
+  }
+}
+
+/* Desktop: esconde menu-mobile */
+.vakinha-header .menu-mobile {
+  display: none;
+}
+
+/* Desktop: esconde barra fixa */
+@media (min-width: 601px) {
+  .fixed-action-bar {
+    display: none !important;
+  }
+}
+
+/* Sidebar-card mobile/desktop visibilidade */
+.sidebar-card-mobile {
+  display: none !important;
+}
+.sidebar-card-desktop {
+  display: block !important;
+}
+
+@media (max-width: 600px) {
+  .sidebar-card-mobile {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 18px 12px 0 12px !important;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    border-radius: 18px !important;
+    background: #fff;
+    padding: 22px 12px;
+    text-align: center;
+    max-width: calc(100vw - 24px);
+    width: auto;
+  }
+  .sidebar-card-mobile .progress-bar {
+    margin-bottom: 18px;
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90% !important;
+    display: block;
+  }
+  .sidebar-card-mobile h3,
+  .sidebar-card-mobile .amount,
+  .sidebar-card-mobile .goal {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: block;
+    width: 100%;
+  }
+  .sidebar-card-mobile .amount {
+    color: #00c853;
+    font-weight: bold;
+    font-size: 2em;
+    margin-bottom: 2px;
+  }
+  .sidebar-card-mobile .goal {
+    color: #888;
+    font-size: 1em;
+    margin-bottom: 10px;
+  }
+  .sidebar-card-mobile .stats-block {
+    background: #f3fff3;
+    border-radius: 10px;
+    padding: 12px 10px;
+    margin-bottom: 18px;
+    margin-top: 10px;
+    font-size: 1.08em;
+    color: #222;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    align-items: stretch;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .sidebar-card-mobile .stats-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+  }
+  .sidebar-card-mobile .stats-label {
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .sidebar-card-mobile .stats-label .heart {
+    color: #00c853;
+    font-size: 1.1em;
+    margin-left: 2px;
+  }
+  .sidebar-card-mobile .stats-value {
+    font-weight: bold;
+    font-size: 1em;
+    color: #282828;
+    min-width: 38px;
+    text-align: right;
+  }
+}
+
+/* evita overflow horizontal geral no layout mobile */
+.campaign-page-main {
+  padding: 0 12px; /* reduz margem lateral do conteúdo */
+  box-sizing: border-box;
+}
+
+/* faz o título e demais blocos respeitarem o padding do container */
+.campaign-card h1,
+.campaign-card .subtitle,
+.campaign-card .desc {
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0 4px;
+  box-sizing: border-box;
+}
+
+/* corrige largura do bloco de arrecadação para caber na tela */
+.sidebar-card-mobile {
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 16px; /* reduz um pouco o padding interno para caber */
+  margin: 14px 0 0 0;
+  overflow: hidden; /* evita que conteúdos internos provoquem overflow */
+  word-wrap: break-word;
+}
+
+/* garante que elementos internos usem 100% do espaço disponível */
+.sidebar-card-mobile .stats-block,
+.sidebar-card-mobile .progress-bar,
+.sidebar-card-mobile .amount,
+.sidebar-card-mobile .goal {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* reduz espaçamento interno das linhas de estatísticas para caber */
+.sidebar-card-mobile .stats-row {
+  gap: 6px;
+}
+
+/* se houver imagens ou elementos que possam exceder, limitar */
+.sidebar-card-mobile img,
+.sidebar-card-mobile svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Ajuste: aplicar layout em coluna apenas entre 601px e 900px (tablets).
+   Para mobile (<=600px) forçar linha, assim o menu e a lupa ficam alinhados à direita. */
+@media (min-width: 601px) and (max-width: 900px) {
+  .vakinha-header .container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .vakinha-header nav {
+    display: none;
+  }
+  .vakinha-header .nav-right {
+    gap: 10px;
+  }
+  .vakinha-header .search-box {
+    display: none;
+  }
+  .vakinha-header .menu-mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: transparent; /* removido fundo verde */
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: background .2s;
+  }
+  .vakinha-header .menu-mobile:hover {
+    background: rgba(0,0,0,0.04); /* hover neutro em vez de verde */
+  }
+  .vakinha-header .menu-icon {
+    width: 22px;
+    height: 22px;
+    fill: #282828; /* ícone escuro para ficar visível senza fundo verde */
+  }
+  .campaign-page-main {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 16px;
+  }
+  .campaign-card {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 24px;
+  }
+  .sidebar-card {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+/* Forçar comportamento em linha no mobile para evitar o bug (logo à esquerda, ícones à direita) */
+@media (max-width: 600px) {
+  .vakinha-header .container {
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 8px;
+  }
+  .vakinha-header nav {
+    display: none !important;
+  }
+  .vakinha-header .logo-area {
+    flex: none;
+  }
+  .vakinha-header .nav-right {
+    flex: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+}
+
+.vakinha-header {
+  width: 100%;
+  background: #ffffff;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.08);
+  z-index: 999;
+}
+
+/* Área interna (linha) */
+.vakinha-header .header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+/* Grupo da esquerda: logo + texto "vakinha" */
+.vakinha-header .brand-area {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Logo quadradinho verde */
+.vakinha-header .brand-area .brand-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  background: #00c853;
+}
+
+/* Ajuste da imagem do logo dentro do quadrado */
+.vakinha-header .brand-area .brand-logo img {
+  max-width: 80%;
+  max-height: 80%;
+}
+
+/* Texto "vakinha" */
+.vakinha-header .brand-area .brand-name {
+  font-family: 'Lato', Arial, sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #00c853;
+}
+
+/* ===========================
+   BUSCA (lupa + texto no desktop)
+   =========================== */
+
+/* wrapper da busca */
+.vakinha-header .search-box {
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'Lato', Arial, sans-serif;
+  font-size: 1.08em;
+  color: #00c853;
+  font-weight: 700;
+  cursor: pointer;
+  outline: none;
+}
+
+/* texto "Buscar" (visível só no desktop) */
+.vakinha-header .search-box .search-label {
+  display: inline-block;
+  margin-left: 4px;
+  color: #00c853;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+/* ícone de lupa */
+.vakinha-header .search-box .search-icon {
+  width: 1.1em;
+  height: 1.1em;
+  stroke: #00c853;
+  fill: none;
+  vertical-align: middle;
+}
+
+/* remover qualquer hover de fundo da busca */
+.vakinha-header .search-box:hover,
+.vakinha-header .search-box:active {
+  background: none !important;
+  box-shadow: none !important;
+}
+
+/* ===========================
+   MENU MOBILE (hambúrguer)
+   =========================== */
+
+.vakinha-header .menu-mobile {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.vakinha-header .menu-mobile:hover {
+  background: rgba(0,0,0,0.04) !important; /* hover suave */
+}
+
+/* Ícone hambúrguer escuro */
+.vakinha-header .menu-icon,
+.vakinha-header .menu-mobile svg rect,
+.vakinha-header .menu-mobile svg line {
+  fill: #282828 !important;
+  stroke: #282828 !important;
+}
+
+/* ===========================
+   MOBILE
+   =========================== */
+
+/* ===========================
+   HEADER MOBILE FINAL
+   =========================== */
+@media (max-width: 600px) {
+
+  /* Header bem mais alto */
+  .vakinha-header {
+    height: auto !important; /* remove limite fixo */
+    padding: 0 !important;
+  }
+
+  .vakinha-header .container {
+    height: auto !important;
+    padding: 20px 16px !important;     /* 🔥 AUMENTA TOPO + BASE */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  /* Logo maior proporcional ao header */
+  .vakinha-header .logo-area {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .vakinha-header .logo-img {
+    height: 40px !important;           /* antes 48px → agora proporcional ao mobile */
+    width: auto;
+  }
+
+  .vakinha-header .logo-text {
+    font-size: 1.4rem !important;
+    letter-spacing: -0.5px;
+  }
+
+  /* Lupa maior */
+  .vakinha-header .search-box .search-icon {
+    width: 1.7em !important;           /* 🔥 maior */
+    height: 1.7em !important;
+    stroke-width: 2.4px !important;
+  }
+
+  /* Lupa e hambúrguer mais próximos */
+  .vakinha-header .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 6px !important;               /* 🔥 mais perto */
+  }
+
+  /* Área clicável maior (padrão iOS/Android) */
+  .vakinha-header .search-box,
+  .vakinha-header .menu-mobile {
+    width: 46px !important;
+    height: 46px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Remove texto "Buscar" no mobile */
+  .vakinha-header .search-label {
+    display: none !important;
+  }
+}
+
+/* RESPONSIVIDADE GERAL PARA MOBILE */
+@media (max-width: 900px) {
+  .campaign-layout,
+  .campaign-page-main {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0 !important;
+    padding: 0 0 !important;
+    max-width: 100vw !important;
+    width: 100% !important;
+    box-sizing: border-box;
+  }
+  .campaign-card,
+  .campaign-sidebar,
+  .sidebar-card,
+  .sidebar-card-desktop,
+  .sidebar-card-mobile {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box;
+    margin: 0 0 18px 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+  .campaign-card {
+    padding: 0 0 18px 0 !important;
+    margin-bottom: 0 !important;
+  }
+  .campaign-card .cover-img {
+    border-radius: 0 !important;
+    height: 180px !important;
+    object-fit: cover !important;
+  }
+  .campaign-card h1,
+  .campaign-card .subtitle,
+  .campaign-card .desc,
+  .campaign-card .category-location-row,
+  .campaign-tabs,
+  .faq-section,
+  .pix-block {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+    box-sizing: border-box;
+  }
+  .campaign-card h1 {
+    font-size: 1.25em !important;
+    margin-top: 12px !important;
+  }
+  .campaign-card .subtitle {
+    font-size: 1em !important;
+    margin-top: 8px !important;
+  }
+  .campaign-card .desc {
+    font-size: 1em !important;
+    margin-top: 12px !important;
+  }
+  .campaign-card .category-location-row {
+    margin-top: 10px !important;
+    font-size: 0.95em !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 2px !important;
+  }
+  .campaign-tabs {
+    gap: 12px !important;
+    margin-top: 18px !important;
+    font-size: 0.98em !important;
+    padding-bottom: 0 !important;
+  }
+  .faq-section {
+    margin-top: 18px !important;
+    padding: 14px 12px !important;
+  }
+  .pix-block {
+    margin-top: 14px !important;
+    padding: 10px 12px !important;
+    font-size: 0.98em !important;
+  }
+  .sidebar-card-desktop {
+    display: none !important;
+  }
+  .sidebar-card-mobile {
+    display: block !important;
+    margin: 18px 0 0 0 !important;
+    border-radius: 8px !important;
+    background: #fff !important;
+    padding: 18px 12px !important;
+    text-align: center !important;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07) !important;
+  }
+  .sidebar-card-mobile .progress-bar {
+    margin-bottom: 14px !important;
+    margin-top: 0 !important;
+  }
+  .sidebar-card-mobile h3 {
+    font-size: 1.08em !important;
+    margin-bottom: 6px !important;
+    margin-top: 0 !important;
+    text-align: left !important;
+  }
+  .sidebar-card-mobile .amount {
+    font-size: 1.4em !important;
+    margin-bottom: 2px !important;
+    text-align: left !important;
+  }
+  .sidebar-card-mobile .goal {
+    font-size: 0.98em !important;
+    margin-bottom: 8px !important;
+    text-align: left !important;
+  }
+  .sidebar-card-mobile .stats-block {
+    padding: 10px 8px !important;
+    margin-bottom: 12px !important;
+    margin-top: 8px !important;
+    font-size: 0.98em !important;
+    gap: 5px !important;
+  }
+  .sidebar-card-mobile .stats-row {
+    gap: 4px !important;
+  }
+  .sidebar-card-mobile .stats-label .heart {
+    font-size: 1em !important;
+  }
+  .sidebar-card-mobile .stats-value {
+    min-width: 30px !important;
+    font-size: 0.98em !important;
+  }
+  .sidebar-card-mobile img,
+  .sidebar-card-mobile svg {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+  .sidebar-card {
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .campaign-sidebar {
+    margin-top: 0 !important;
+    padding: 0 !important;
+  }
+  .footer-main,
+  .footer-content,
+  .footer-col {
+    max-width: 100vw !important;
+    width: 100% !important;
+    box-sizing: border-box;
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+/* RESPONSIVIDADE ABSOLUTA PARA TODAS AS RESOLUÇÕES */
+@media (max-width: 1100px) {
+  .campaign-layout,
+  .campaign-page-main {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0 !important;
+    padding: 0 !important;
+    max-width: 100vw !important;
+    width: 100% !important;
+    box-sizing: border-box;
+  }
+  .campaign-card,
+  .campaign-sidebar,
+  .sidebar-card,
+  .sidebar-card-desktop,
+  .sidebar-card-mobile {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box;
+    margin: 0 0 18px 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+  .campaign-card {
+    padding: 0 0 18px 0 !important;
+    margin-bottom: 0 !important;
+  }
+  .campaign-card .cover-img {
+    border-radius: 0 !important;
+    height: 180px !important;
+    object-fit: cover !important;
+  }
+  .campaign-card h1,
+  .campaign-card .subtitle,
+  .campaign-card .desc,
+  .campaign-card .category-location-row,
+  .campaign-tabs,
+  .faq-section,
+  .pix-block {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+    box-sizing: border-box;
+  }
+  .campaign-card h1 {
+    font-size: 1.25em !important;
+    margin-top: 12px !important;
+  }
+  .campaign-card .subtitle {
+    font-size: 1em !important;
+    margin-top: 8px !important;
+  }
+  .campaign-card .desc {
+    font-size: 1em !important;
+    margin-top: 12px !important;
+  }
+  .campaign-card .category-location-row {
+    margin-top: 10px !important;
+    font-size: 0.95em !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 2px !important;
+  }
+  .campaign-tabs {
+    gap: 12px !important;
+    margin-top: 18px !important;
+    font-size: 0.98em !important;
+    padding-bottom: 0 !important;
+  }
+  .faq-section {
+    margin-top: 18px !important;
+    padding: 14px 12px !important;
+  }
+  .pix-block {
+    margin-top: 14px !important;
+    padding: 10px 12px !important;
+    font-size: 0.98em !important;
+  }
+  .sidebar-card-desktop {
+    display: none !important;
+  }
+  .sidebar-card-mobile {
+    display: block !important;
+    margin: 18px 0 0 0 !important;
+    border-radius: 8px !important;
+    background: #fff !important;
+    padding: 18px 12px !important;
+    text-align: center !important;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07) !important;
+  }
+  .sidebar-card-mobile .progress-bar {
+    margin-bottom: 14px !important;
+    margin-top: 0 !important;
+  }
+  .sidebar-card-mobile h3 {
+    font-size: 1.08em !important;
+    margin-bottom: 6px !important;
+    margin-top: 0 !important;
+    text-align: left !important;
+  }
+  .sidebar-card-mobile .amount {
+    font-size: 1.4em !important;
+    margin-bottom: 2px !important;
+    text-align: left !important;
+  }
+  .sidebar-card-mobile .goal {
+    font-size: 0.98em !important;
+    margin-bottom: 8px !important;
+    text-align: left !important;
+  }
+  .sidebar-card-mobile .stats-block {
+    padding: 10px 8px !important;
+    margin-bottom: 12px !important;
+    margin-top: 8px !important;
+    font-size: 0.98em !important;
+    gap: 5px !important;
+  }
+  .sidebar-card-mobile .stats-row {
+    gap: 4px !important;
+  }
+  .sidebar-card-mobile .stats-label .heart {
+    font-size: 1em !important;
+  }
+  .sidebar-card-mobile .stats-value {
+    min-width: 30px !important;
+    font-size: 0.98em !important;
+  }
+  .sidebar-card-mobile img,
+  .sidebar-card-mobile svg {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+  .sidebar-card {
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .campaign-sidebar {
+    margin-top: 0 !important;
+    padding: 0 !important;
+  }
+  .footer-main,
+  .footer-content,
+  .footer-col {
+    max-width: 100vw !important;
+    width: 100% !important;
+    box-sizing: border-box;
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+/* RESPONSIVIDADE MOBILE EXATAMENTE IGUAL ÀS FOTOS */
+@media (max-width: 700px) {
+  html, body {
+    width: 100vw !important;
+    min-width: 0 !important;
+    overflow-x: hidden !important;
+    background: #f3f3f3 !important;
+  }
+
+  .campaign-layout,
+  .campaign-page-main {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0 !important;
+    padding: 0 !important;
+    max-width: 100vw !important;
+    width: 100vw !important;
+    box-sizing: border-box;
+    margin: 0 !important;
+  }
+
+  .campaign-card,
+  .campaign-sidebar,
+  .sidebar-card,
+  .sidebar-card-desktop,
+  .sidebar-card-mobile {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    min-width: 0 !important;
+    box-sizing: border-box;
+    margin: 0 0 18px 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .campaign-card {
+    padding: 0 0 18px 0 !important;
+    margin-bottom: 0 !important;
+    background: #fff !important;
+  }
+
+  .campaign-card .cover-img {
+    border-radius: 0 !important;
+    width: 100vw !important;
+    max-width: 100vw !important;
+    height: 180px !important;
+    object-fit: cover !important;
+    margin: 0 !important;
+    display: block !important;
+  }
+
+  .campaign-card h1,
+  .campaign-card .subtitle,
+  .campaign-card .desc,
+  .campaign-card .category-location-row,
+  .campaign-tabs,
+  .faq-section,
+  .pix-block {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    box-sizing: border-box;
+    width: 100vw !important;
+    max-width: 100vw !important;
+  }
+
+  .campaign-card h1 {
+    font-size: 1.25em !important;
+    margin-top: 12px !important;
+    font-weight: 800 !important;
+    line-height: 1.2 !important;
+    padding-top: 8px !important;
+    padding-bottom: 0 !important;
+  }
+  .campaign-card .subtitle {
+    font-size: 1em !important;
+    margin-top: 8px !important;
+    font-weight: 600 !important;
+  }
+  .campaign-card .desc {
+    font-size: 1em !important;
+    margin-top: 12px !important;
+    font-weight: 400 !important;
+    line-height: 1.5 !important;
+  }
+  .campaign-card .category-location-row {
+    margin-top: 10px !important;
+    font-size: 0.95em !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 2px !important;
+    padding-top: 8px !important;
+    padding-bottom: 0 !important;
+  }
+  .campaign-card .category {
+    font-size: 0.92em !important;
+    color: #888 !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+  }
+  .campaign-card .location {
+    font-size: 0.92em !important;
+    color: #888 !important;
+    font-weight: 500 !important;
+  }
+  .campaign-tabs {
+    gap: 10px !important;
+    margin-top: 18px !important;
+    font-size: 1em !important;
+    padding-bottom: 0 !important;
+    border-bottom: 2px solid #eee !important;
+    width: 100vw !important;
+    overflow-x: auto !important;
+  }
+  .campaign-tabs .tab {
+    padding: 10px 0 8px 0 !important;
+    font-size: 1em !important;
+    min-width: 90px !important;
+    text-align: center !important;
+    border-bottom-width: 2px !important;
+  }
+  .faq-section {
+    margin-top: 18px !important;
+    padding: 14px 12px !important;
+    border-radius: 8px !important;
+    background: #fafafa !important;
+  }
+  .pix-block {
+    margin-top: 14px !important;
+    padding: 10px 12px !important;
+    font-size: 0.98em !important;
+    border-radius: 8px !important;
+  }
+
+  .sidebar-card-desktop {
+    display: none !important;
+  }
+  .sidebar-card-mobile {
+    display: block !important;
+    margin: 18px 0 0 0 !important;
+    border-radius: 12px !important;
+    background: #fff !important;
+    padding: 18px 12px !important;
+    text-align: center !important;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07) !important;
+  }
+  .sidebar-card-mobile .progress-bar {
+    margin-bottom: 14px !important;
+    margin-top: 0 !important;
+  }
+  .sidebar-card-mobile h3 {
+    font-size: 1.08em !important;
+    margin-bottom: 6px !important;
+    margin-top: 0 !important;
+    text-align: left !important;
+  }
+  .sidebar-card-mobile .amount {
+    font-size: 1.4em !important;
+    margin-bottom: 2px !important;
+    text-align: left !important;
+  }
+  .sidebar-card-mobile .goal {
+    font-size: 0.98em !important;
+    margin-bottom: 8px !important;
+    text-align: left !important;
+  }
+  .sidebar-card-mobile .stats-block {
+    padding: 10px 8px !important;
+    margin-bottom: 12px !important;
+    margin-top: 8px !important;
+    font-size: 0.98em !important;
+    gap: 5px !important;
+  }
+  .sidebar-card-mobile .stats-row {
+    gap: 4px !important;
+  }
+  .sidebar-card-mobile .stats-label .heart {
+    font-size: 1em !important;
+  }
+  .sidebar-card-mobile .stats-value {
+    min-width: 30px !important;
+    font-size: 0.98em !important;
+  }
+  .sidebar-card-mobile img,
+  .sidebar-card-mobile svg {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+  .sidebar-card {
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .campaign-sidebar {
+    margin-top: 0 !important;
+    padding: 0 !important;
+  }
+  .footer-main,
+  .footer-content,
+  .footer-col {
+    max-width: 100vw !important;
+    width: 100vw !important;
+    box-sizing: border-box;
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+/* Override: retirar o background transparente e aplicar fundo sólido sob os cards */
+@media (max-width: 600px) {
+  .fixed-action-bar {
+    background: #f3f3f3 !important; /* fundo sólido atrás dos elementos */
+    box-shadow: 0 -4px 16px -6px rgba(0,0,0,0.15) !important;
+    padding: 12px 0 18px 0 !important;
+  }
+}
+
+/* Remover transparência e gap lateral do bloco verde (ocupa largura total interna) */
+@media (max-width: 600px) {
+  .fixed-action-bar .donation-protected {
+    width: calc(100% - 24px) !important; /* pequeno respiro para mostrar cantos */
+    margin: 0 12px 12px 12px !important;
+    padding: 14px 0 !important;
+    background: #e9fdeb !important;
+    border-radius: 16px !important;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  }
+}
+
+/* Se quiser sem nenhuma margem (tocando as laterais) descomente abaixo */
+/*
+@media (max-width: 600px) {
+  .fixed-action-bar .donation-protected {
+    width:100% !important;
+    margin:0 !important;
+    border-radius:0 !important;  // perde cantos se encostar nas bordas
+  }
+}
+*/
+
+/* Ajustar botões para aproximar mantendo seus próprios fundos */
+@media (max-width: 600px) {
+  .fixed-action-bar .action-btn {
+    width: calc(100% - 24px);
+    margin: 0 12px;
+  }
+  .fixed-action-bar .btn-primary.action-btn { margin-top: 0 !important; }
+  .fixed-action-bar .btn-outline.action-btn { margin-top: 10px !important; }
+}
+
+/* Neutralizar a regra antiga que deixava sem fundo */
+.fixed-action-bar .donation-protected {
+  background: #e9fdeb !important;
+}
+
+/* ======================== */
+/* MOBILE POR CLASSE DE APARELHO */
+/* ======================== */
+body.is-mobile {
+  width: 100vw;
+  overflow-x: hidden;
+  background: #f3f3f3;
+}
+
+body.is-mobile .vakinha-header {
+  height: 56px;
+  padding: 0 12px;
+  border-bottom: 1px solid #eee;
+}
+
+body.is-mobile .vakinha-header .container {
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 100vw;
+  padding: 0;
+  margin: 0;
+}
+
+body.is-mobile nav {
+  display: none !important;
+}
+
+body.is-mobile .account-link,
+body.is-mobile .btn-vakinha {
+  display: none !important;
+}
+
+body.is-mobile .menu-mobile {
+  display: flex !important;
+  background: transparent !important;
+  border: none;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+}
+
+body.is-mobile .search-box .search-label {
+  display: none !important;
+}
+
+body.is-mobile .search-box {
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  gap: 0;
+}
+
+body.is-mobile .campaign-page-main,
+body.is-mobile .campaign-layout {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0;
+  padding: 0;
+  width: 100vw !important;
+  max-width: 100vw !important;
+  box-sizing: border-box;
+}
+
+body.is-mobile .campaign-card,
+body.is-mobile .campaign-sidebar,
+body.is-mobile .sidebar-card,
+body.is-mobile .sidebar-card-desktop,
+body.is-mobile .sidebar-card-mobile {
+  width: 100vw !important;
+  max-width: 100vw !important;
+  margin: 0 0 18px 0 !important;
+  border-radius: 0;
+  box-shadow: none;
+  padding-left: 0;
+  padding-right: 0;
+  box-sizing: border-box;
+}
+
+body.is-mobile .campaign-card {
+  background: #fff;
+  padding: 0 0 18px 0;
+}
+
+body.is-mobile .campaign-card .cover-img {
+  height: 180px;
+  border-radius: 0;
+  width: 100vw !important;
+  object-fit: cover;
+  margin: 0;
+}
+
+body.is-mobile .campaign-card h1,
+body.is-mobile .campaign-card .subtitle,
+body.is-mobile .campaign-card .desc,
+body.is-mobile .campaign-card .category-location-row,
+body.is-mobile .campaign-tabs,
+body.is-mobile .faq-section,
+body.is-mobile .pix-block {
+  padding: 0 16px;
+  margin: 0;
+  width: 100vw;
+  box-sizing: border-box;
+}
+
+body.is-mobile .campaign-card h1 {
+  font-size: 1.25em;
+  margin-top: 12px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+body.is-mobile .campaign-card .subtitle {
+  font-size: 1em;
+  margin-top: 8px;
+  font-weight: 600;
+}
+
+body.is-mobile .campaign-card .desc {
+  font-size: 1em;
+  margin-top: 12px;
+  line-height: 1.5;
+}
+
+body.is-mobile .campaign-card .category-location-row {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  margin-top: 10px;
+  font-size: 0.95em;
+}
+
+body.is-mobile .sidebar-card-desktop {
+  display: none !important;
+}
+
+body.is-mobile .sidebar-card-mobile {
+  display: block !important;
+  margin: 18px 0 0 0;
+  background: #fff;
+  padding: 18px 12px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+}
+
+body.is-mobile .sidebar-card-mobile .progress-bar {
+  margin-bottom: 14px;
+}
+
+body.is-mobile .sidebar-card-mobile h3 {
+  font-size: 1.08em;
+  margin: 0 0 6px 0;
+  text-align: left;
+  font-weight: 700;
+}
+
+body.is-mobile .sidebar-card-mobile .amount {
+  font-size: 1.4em;
+  font-weight: 800;
+  text-align: left;
+  margin: 0 0 2px 0;
+  color: #00c853;
+}
+
+body.is-mobile .sidebar-card-mobile .goal {
+  font-size: 0.98em;
+  font-weight: 600;
+  text-align: left;
+  margin: 0 0 8px 0;
+  color: #888;
+}
+
+body.is-mobile .sidebar-card-mobile .stats-block {
+  padding: 10px 8px;
+  margin: 8px 0 12px 0;
+  font-size: 0.98em;
+  gap: 5px;
+  background: #f3fff3;
+  border-radius: 8px;
+}
+
+body.is-mobile .sidebar-card-mobile .stats-row {
+  gap: 4px;
+}
+
+body.is-mobile .fixed-action-bar {
+  display: flex !important;
+}
+
+body.is-mobile .footer-content {
+  flex-direction: column;
+  gap: 18px;
+  padding: 18px 8px;
+}
+
+body.is-mobile .footer-col {
+  margin: 0 0 18px 0;
+  text-align: center;
+}
+
+/* Garantir que desktop mantém layout grid normal */
+body.is-desktop .campaign-layout {
+  display: grid;
+}
+
+/* Fallback: se classe mobile presente, ignorar media query desktop */
+@media (min-width: 1101px) {
+  body.is-mobile .campaign-layout { display: flex !important; }
+}
+
+.sidebar-card .donation-protected,
+.fixed-action-bar .donation-protected {
+  background: none !important;
+  padding: 0 !important;
+  border: none !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  box-shadow: none !important;
+}
+
+.sidebar-card .donation-protected .donation-icon,
+.sidebar-card .donation-protegida-img,
+.fixed-action-bar .donation-protected .donation-icon,
+.fixed-action-bar .donation-protegida-img {
+  display: none !important;
+}
+
+.doacao-protegida-img {
+  display: block;
+  height: 48px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+/* Ajuste mobile barra fixa (centralizar) */
+.fixed-action-bar .donation-protected {
+  flex: 0 0 auto;
+  margin: 8px 16px 0 16px !important;
+}
+
+/* Barra fixa mobile estilizada igual exemplo da foto */
+@media (max-width: 600px) {
+  .fixed-action-bar {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0 0 12px 0 !important;
+    background: #ffffff;
+    border-top: none;
+    box-shadow: 0 -6px 22px -6px rgba(0,0,0,0.18);
+  }
+  .fixed-action-bar .donation-protected {
+    margin: 0;
+    padding: 12px 0 14px 0 !important;
+    background: #e9fdeb !important; /* verde bem claro */
+    border-radius: 0 0 20px 20px;
+    border: none !important;
+    position: relative;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+  }
+  .fixed-action-bar .donation-protected::after {
+    content: "";
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    height: 12px;
+    background: linear-gradient(to bottom, rgba(233,253,235,0) 0%, rgba(233,253,235,1) 70%);
+    border-radius: 0 0 20px 20px;
+    pointer-events: none;
+  }
+  .fixed-action-bar .doacao-protegida-img {
+    height: 26px !important;
+    width: auto;
+    display: block;
+    filter: drop-shadow(0 1px 2px rgba(0,0,0,0.15));
+  }
+
+  /* Botões iguais largura / altura */
+  .fixed-action-bar .action-btn {
+    width: calc(100% - 32px);
+    margin: 12px 16px 0 16px;
+    display: block;
+    text-align: center;
+    font-family: 'Montserrat', Arial, sans-serif !important;
+    font-weight: 700 !important;
+    font-size: 1.05em;
+    padding: 16px 0;
+    border-radius: 12px;
+    line-height: 1;
+    box-sizing: border-box;
+  }
+  .fixed-action-bar .btn-primary.action-btn {
+    background: #00c853;
+    color: #fff;
+    border: none;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+  }
+  .fixed-action-bar .btn-primary.action-btn:hover {
+    background: #00b348;
+  }
+  .fixed-action-bar .btn-outline.action-btn {
+    background: #fff;
+    color: #282828;
+    border: 2px solid #282828;
+  }
+  .fixed-action-bar .btn-outline.action-btn:hover {
+    background: #282828;
+    color: #fff;
+  }
+
+  /* Ajuste de espaçamento inferior global para não cobrir conteúdo */
+  body.is-mobile {
+    padding-bottom: 140px; /* reserva espaço para barra fixa */
+  }
+}
+
+/* Garantir que imagem antiga estilos não interfiram */
+.fixed-action-bar .donation-protected .donation-icon,
+.fixed-action-bar .donation-protegida_img {
+  display: none !important;
+}
+
+/* === Remover totalmente fundo branco atrás dos botões (mobile) === */
+@media (max-width: 600px) {
+  .fixed-action-bar {
+    background: transparent !important;
+    box-shadow: none !important;
+    border-top: none !important;
+  }
+
+  /* Verde permanece; apenas garantir que não herde fundo de ancestrais */
+  .fixed-action-bar .btn-primary.action-btn {
+    background: #00c853 !important;
+  }
+
+  /* Compartilhar sem fundo branco interno */
+  .fixed-action-bar .btn-outline.action-btn {
+    background: transparent !important;
+    border: 2px solid #282828 !important;
+  }
+
+  /* Remover possíveis fundos aplicados via colisões anteriores */
+  .fixed-action-bar .action-btn {
+    background-clip: padding-box !important;
+  }
+}
+
+/* Caso alguma regra anterior force #f3f3f3 ou #fff novamente */
+@media (max-width: 600px) {
+  .fixed-action-bar[style],
+  .fixed-action-bar .action-btn[style] {
+    background: transparent !important;
+  }
+}
+
+/* === Restaurar fundo verde do botão Quero Ajudar (mobile) === */
+@media (max-width: 600px) {
+  .fixed-action-bar .btn-primary.action-btn {
+    background: #00c853 !important;
+    color: #fff !important;
+    background-image: none !important;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.12) !important;
+  }
+}
+
+/* === Fundo branco arredondado exclusivamente sobre cada botão (mobile) === */
+@media (max-width: 600px) {
+  .fixed-action-bar .fab-btn-box {
+    width: calc(100% - 32px);
+    margin: 0 16px 12px 16px;
+    background: #ffffff;
+    padding: 8px;
+    border-radius: 18px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    box-sizing: border-box;
+    display: flex;
+  }
+  /* Primeiro botão (Quero Ajudar) encosta no bloco verde acima */
+  .fixed-action-bar .donation-protegida + .fab-btn-box {
+    margin-top: 0;
+  }
+  .fixed-action-bar .fab-btn-box .action-btn {
+    width: 100% !important;
+    margin: 0 !important;
+    border-radius: 12px !important;
+    padding: 16px 0 !important;
+    box-shadow: none !important;
+  }
+  .fixed-action-bar .fab-btn-box .btn-primary.action-btn {
+    background: #00c853 !important;
+    color: #fff !important;
+  }
+  .fixed-action-bar .fab-btn-box .btn-outline.action-btn {
+    background: #fff !important; /* mantém branco dentro do container */
+    color: #282828 !important;
+    border: 2px solid #282828 !important;
+  }
+  .fixed-action-bar .fab-btn-box .btn-outline.action-btn:hover {
+    background: #282828 !important;
+    color: #fff !important;
+  }
+  /* Remover antigas larguras/margens dos botões fora do wrapper */
+  .fixed-action-bar .action-btn:not(.fab-btn-box .action-btn) {
+    margin: 0 !important;
+    width: auto;
+  }
+}
+
+/* === Grupo único com fundo branco para os dois botões (mobile) === */
+@media (max-width: 600px) {
+  .fixed-action-bar .fab-btn-group {
+    width: calc(100% - 32px);
+    margin: 0 16px 14px 16px;
+    background: #ffffff;
+    padding: 12px 12px 14px;
+    border-radius: 22px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.10);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    box-sizing: border-box;
+  }
+  .fixed-action-bar .donation-protegida + .fab-btn-group {
+    margin-top: 8px;
+  }
+  .fixed-action-bar .fab-btn-group .action-btn {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 16px 0 !important;
+    border-radius: 14px !important;
+    box-shadow: none !important;
+  }
+  .fixed-action-bar .fab-btn-group .btn-primary.action-btn {
+    background: #00c853 !important;
+    color: #fff !important;
+  }
+  .fixed-action-bar .fab-btn-group .btn-outline.action-btn {
+    background: #fff !important;
+    color: #282828 !important;
+    border: 2px solid #282828 !important;
+  }
+  .fixed-action-bar .fab-btn-group .btn-outline.action-btn:hover {
+    background: #282828 !important;
+    color: #fff !important;
+  }
+  /* Neutralizar regras anteriores de largura/margem fora do grupo */
+  .fixed-action-bar .action-btn:not(.fab-btn-group .action-btn) {
+    margin: 0 !important;
+    width: auto !important;
+  }
+}
+
+@media (max-width: 600px) {
+  
+    /* Ajuste fino da imagem */
+  .fixed-action-bar .donation-protected img,
+  .fixed-action-bar .doacao-protegida_img {
+    height: 110px !important;      /* aumenta ainda mais a imagem */
+    width: auto !important;
+    display: block;
+    margin-top: -10px !important;   /* desce a imagem */
+    margin-bottom: 0 !important;
+  }
+
+  /* Opcional: subir todo o conteúdo interno levemente */
+  .fixed-action-bar .donation-protegida {
+    padding-top: 8px !important; /* sobe ligeiramente o conteúdo */
+  }
+
+}
+
+/* Container fixo no rodapé */
+.fixed-action-bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: transparent !important;
+  padding: 0 !important;
+  z-index: 9999;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* FUNDO VERDE (MAIOR NA PARTE INFERIOR E ATRÁS DO BRANCO) */
+.fixed-action-bar .donation-protected {
+  background: #E6FFE8 !important;
+  border-radius: 24px !important;
+
+  /* 🔥 aumenta altura inferior */
+  padding: 14px 16px 48px 16px !important;
+
+  /* 🔥 coloca o branco por cima DO VERDE */
+  margin: 0 20px -55px 20px !important;
+
+  position: relative;
+  z-index: 1; /* fica atrás do branco */
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Imagem no topo */
+.fixed-action-bar .donation-protected img,
+.fixed-action-bar .doacao-protegida-img {
+  height: 34px !important;
+  width: auto !important;
+  display: block;
+}
+
+/* BLOCO BRANCO DOS BOTÕES (DEVE FICAR POR CIMA DO VERDE) */
+.fixed-action-bar .fab-btn-group {
+  background: #ffffff !important;
+  width: 100vw;
+
+  border-radius: 22px 22px 0 0;
+  box-shadow: 0 -4px 16px rgba(0,0,0,0.12);
+
+  position: relative;
+  z-index: 2; /* 🔥 aparece acima do verde */
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  box-sizing: border-box;
+
+  padding: 22px 20px calc(env(safe-area-inset-bottom) + 10px) !important;
+
+  margin-top: 0 !important;
+}
+
+/* Botões */
+.fixed-action-bar .fab-btn-group .action-btn {
+  width: 100%;
+  padding: 14px 0;
+  border-radius: 999px;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  /* Footer: coluna única, conteúdo centralizado e largura limitada para evitar overflow */
+  .footer-main {
+    padding: 0 !important;
+  }
+  .footer-content {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 18px !important;
+    padding: 18px 12px !important;
+    max-width: 100vw !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .footer-col {
+    flex: none !important;
+    width: 100% !important;
+    max-width: 420px !important; /* mantém colunas confortáveis */
+    margin: 0 auto !important;
+    text-align: center !important;
+    padding: 8px 12px !important;
+    box-sizing: border-box !important;
+  }
+  .footer-col h4 {
+    margin-bottom: 10px !important;
+    margin-top: 6px !important;
+    font-size: 1.05em !important;
+  }
+  .footer-col ul {
+    padding: 0 !important;
+    margin: 0 !important;
+    list-style: none !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 6px !important;
+  }
+  .footer-col ul li {
+    margin-bottom: 6px !important;
+    font-size: 1em !important;
+    color: #eee !important;
+    text-align: center !important;
+  }
+  .footer-icon {
+    height: 84px !important;
+    margin: 0 0 12px 0 !important;
+    display: block !important;
+  }
+  .footer-app-icon {
+    height: 84px !important;
+    margin: 0 auto 10px auto !important;
+  }
+  .footer-selo-icon {
+    height: 28px !important;
+    margin: 8px auto 0 auto !important;
+  }
+  .footer-bottom {
+    width: 100% !important;
+    padding: 12px 10px !important;
+    font-size: 0.95em !important;
+    box-sizing: border-box !important;
+    text-align: center !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-content {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    grid-auto-rows: auto;
+    gap: 28px 18px !important;
+    padding: 28px 12px 12px !important;
+    max-width: 100vw !important;
+    box-sizing: border-box;
+    justify-items: center;
+    align-items: start;
+  }
+  .footer-col {
+    flex: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 6px !important;
+    text-align: center !important;
+    box-sizing: border-box;
+  }
+  .footer-col h4 {
+    margin: 0 0 10px 0 !important;
+    font-size: 1.05em !important;
+  }
+  .footer-col ul {
+    list-style: none;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+  }
+  .footer-col ul li {
+    margin: 0 !important;
+    font-size: 0.95em !important;
+    line-height: 1.3;
+  }
+  .footer-icon {
+    height: 70px !important;
+    margin: 0 0 12px 0 !important;
+    display: block;
+  }
+  .footer-app-icon {
+    height: 72px !important;
+    margin: 4px 0 0 0 !important;
+    display: block;
+  }
+  .footer-selo-icon {
+    height: 30px !important;
+    margin: 10px 0 0 0 !important;
+  }
+  /* Ajuste links para toque */
+  .footer-col a {
+    display: inline-block;
+    padding: 4px 0;
+  }
+  /* Linha final */
+  .footer-bottom {
+    padding: 12px 8px !important;
+    font-size: 0.9em !important;
+    width: 100% !important;
+    box-sizing: border-box;
+    margin: 0 !important;
+  }
+}
+
+@media (max-width: 600px) {
+  /* Footer textos menores + centralização da logo */
+  .footer-content {
+    justify-items: center !important; /* garante centralização em grid */
+  }
+  .footer-col h4 {
+    font-size: 0.88em !important;
+    letter-spacing: .2px;
+  }
+  .footer-col ul li,
+  .footer-col a {
+    font-size: 0.80em !important;
+    line-height: 1.25 !important;
+  }
+  .footer-icon {
+    height: 20px !important;
+    margin: 0 auto 8px auto !important;
+    display: block !important;
+  }
+  /* Ajuste extra para selo e apps acompanharem redução */
+  .footer-app-icon {
+    height: 60px !important;
+  }
+  .footer-selo-icon {
+    height: 24px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .campaign-card {
+    width: calc(100% - 32px) !important;
+    margin: 16px auto 24px !important;
+    border-radius: 18px !important;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08) !important;
+    background: #fff !important;
+    overflow: hidden !important;
+  }
+  .campaign-card .cover-img {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 220px !important;
+    aspect-ratio: 16 / 9 !important;
+    object-fit: cover !important;
+    border-radius: 18px 18px 0 0 !important;
+    display: block !important;
+  }
+  .campaign-card .category-location-row,
+  .campaign-card h1,
+  .campaign-card .subtitle,
+  .campaign-card .desc {
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .campaign-card .category-location-row {
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 10px !important;
+    margin: 10px 18px 0 18px !important;
+    padding: 0 !important;
+  }
+  .campaign-card .category,
+  .campaign-card .location {
+    font-size: 0.70em !important;
+    line-height: 1 !important;
+    font-weight: 600 !important;
+    white-space: nowrap !important;
+  }
+  .campaign-card .category {
+    letter-spacing: 0.5px !important;
+  }
+  .campaign-card .location {
+    display: flex !important;
+    align-items: center !important;
+    gap: 4px !important;
+  }
+  .campaign-card .location-icon {
+    width: 14px !important;
+    height: 14px !important;
+    margin: 0 !important;
+    flex: 0 0 auto !important;
+  }
+  .sidebar-card-mobile {
+    width: 100% !important;
+    margin: 18px 18px 0 18px !important;
+    border: 1px solid #f0f0f0 !important;
+    background: #fafafa !important;
+    border-radius: 14px !important;
+    box-shadow: none !important;
+    padding: 18px 16px !important;
+  }
+  .sidebar-card-mobile .progress-bar {
+    width: 100% !important;
+  }
+  .campaign-page-main {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+@media (max-width: 600px) {
+  /* Remove fundo/rounding do card de arrecadação somente no mobile
+     — agora com limites de largura e padding para não ultrapassar a tela */
+  .sidebar-card-mobile {
+    background: transparent !important;
+    border-radius: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+
+    /* manter padding interno para conteúdo não encostar nas bordas */
+    padding: 12px 16px !important;
+
+    /* centralizar e limitar largura para evitar overflow (não usar 100vw) */
+    margin: 12px auto 18px auto !important;
+    max-width: calc(100vw - 32px) !important;
+    width: calc(100% - 32px) !important;
+    box-sizing: border-box !important;
+
+    /* garantir que conteúdo quebre corretamente */
+    overflow: hidden !important;
+    word-break: break-word !important;
+  }
+
+  /* Progress bar e blocos internos devem ficar dentro do container */
+  .sidebar-card-mobile .progress-bar {
+    margin: 0 0 12px 0 !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .sidebar-card-mobile h3,
+  .sidebar-card-mobile .amount,
+  .sidebar-card-mobile .goal {
+    padding: 0 !important;
+    text-align: left !important;
+    background: transparent !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .sidebar-card-mobile .stats-block {
+    margin: 8px 0 0 0 !important;
+    background: #f3fff3 !important;
+    border-radius: 6px !important;
+    padding: 10px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* imagens/vetores dentro do card não podem ultrapassar */
+  .sidebar-card-mobile img,
+  .sidebar-card-mobile svg {
+    max-width: 100% !important;
+    height: auto !important;
+    display: block !important;
+  }
+
+  /* garantir que o main não permita overflow horizontal */
+  .campaign-page-main,
+  body.is-mobile .campaign-page-main {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+    box-sizing: border-box !important;
+  }
+
+  /* ajuste fino para a barra fixa (evitar overflow lateral) */
+  .fixed-action-bar {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+    box-sizing: border-box !important;
+  }
+}
+
+/* garantir categoria + localização em linha e localização colada à direita */
+@media (max-width: 600px) {
+  .campaign-card .category-location-row {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    margin: 10px 0 0 0 !important;
+    gap: 0 !important;
+    box-sizing: border-box !important;
+  }
+  .campaign-card .category {
+    flex: 0 1 auto !important;
+    text-align: left !important;
+    font-size: 0.78em !important;
+    color: #888 !important;
+    font-weight: 600 !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+  }
+  .campaign-card .location {
+    flex: 0 1 auto !important;
+    text-align: right !important;
+    font-size: 0.78em !important;
+    color: #888 !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    margin-left: auto !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    min-width: 0 !important;
+  }
+  .campaign-card .location-icon {
+    width: 12px !important;
+    height: 12px !important;
+    flex: 0 0 auto !important;
+    margin: 0 !important;
+  }
+}
+
+/* garantir mesmo comportamento quando a classe body.is-mobile estiver presente */
+body.is-mobile .campaign-card .category-location-row {
+  flex-direction: row !important;
+  justify-content: flex-start !important;
+  align-items: center !important;
+}
+body.is-mobile .campaign-card .category,
+body.is-mobile .campaign-card .location {
+  font-size: 0.78em !important;
+}
+body.is-mobile .campaign-card .location {
+  text-transform: uppercase !important;
+  margin-left: auto !important;
+  text-align: right !important;
+}
+
+@media (max-width: 600px) {
+  .vakinha-header {
+    /* ...existing code... */
+  }
+  .vakinha-header + .header-spacer,
+  .header-spacer {
+    display: block !important;
+    height: 18px !important;
+    width: 100% !important;
+    background: transparent !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}
